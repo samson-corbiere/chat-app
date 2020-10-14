@@ -35,7 +35,7 @@ const ContactList = () => (
       <Contact
         avatar={item.avatar}
         name={item.name}
-        statut={item.statut}
+        online={item.online}
       /> 
     ))}
   </div>
