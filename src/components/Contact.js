@@ -18,15 +18,14 @@ class Contact extends React.Component {
           <img className="avatar" src={this.props.avatar} alt={this.props.name}/>
           <div>
               <div className="name">{this.props.name}</div>
-              <div className="status">
-                <i 
-                  className={this.state.online ? "status-online" : "status-offline"}
-                  onClick={(event) => {
-                    const newOnline = !this.state.boolean;
-                    this.setState({ online: newOnline});
-                  }}>
-                </i>
-                <p className="status-text">{this.state.online ? "Online" : "Offline"}</p>
+              <div className="status"
+                onClick={(event) => {
+                  const newOnline = !this.state.online;
+                  this.setState({ online: newOnline});
+                }}>
+                <div className={this.state.online ? "status-online" : "status-offline"}></div>
+                  <p className="status-text">{this.state.online ? "Online" : "Offline"}</p>
+                
               </div>
           </div>
       </div>
